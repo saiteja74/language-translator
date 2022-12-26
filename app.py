@@ -4,8 +4,8 @@ import numpy as np
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator, authenticator
 
-api_key = 'Enter Your Language Translator API KEY'
-url = 'Enter Your Language Translator URL'
+api_key = '7ch_BLkmCjplNEosb_w2oJyJjYCJN0-J-OSbJutwhDkn'
+url = 'https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/97de7be0-bf1f-40fc-a025-7cd7eab59266'
 
 authenticator = IAMAuthenticator(apikey=api_key)
 
@@ -17,12 +17,14 @@ st.title("Language-Translator")
 
 option = st.selectbox(
     'Select Language Here',
-    ('English', 'Telugu', 'Arabic', 'Hindi', 'German', 'Spanish', 'Korean')
+    ('English', 'Telugu', 'Arabic', 'Hindi', 'German', 'Spanish', 'Korean', 'Kannada', 'Japanese',
+     'French', 'Italian', 'Urdu', 'Gujarati')
 )
 
 option1 = st.selectbox(
     'Select Language To Translate',
-    ('English', 'Telugu', 'Arabic', 'Hindi', 'German', 'Spanish', 'Korean')
+    ('English', 'Telugu', 'Arabic', 'Hindi', 'German', 'Spanish', 'Korean', 'Kannada', 'Japanese',
+     'French', 'Italian', 'Urdu', 'Gujarati')
 )
 
 sent = "Enter the text in "+option+" and click translate button"
@@ -55,7 +57,7 @@ if st.button("Translate"):
         st.write("Please Type Selected Language😣")
 
 
-st.write("Created By Ankireddy Saiteja")
+
 
 
 
